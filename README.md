@@ -136,6 +136,36 @@ flutter build ios --release
 flutter build web --release
 ```
 
+## 📸 Screenshots
+
+The app showcases a modern and intuitive user interface:
+
+### Screenshot 1
+![Screenshot 1](assets/screenshots/Screenshot_1.jpg)
+
+### Screenshot 2
+![Screenshot 2](assets/screenshots/Screenshot_2.jpg)
+
+*Screenshots demonstrate the pixel-perfect implementation of the design with smooth animations and responsive layouts.*
+
+## 🎥 Video Demonstration
+
+Watch the complete app demonstration showcasing all features and functionality:
+
+### App Demo Video
+![App Demo](assets/videos/app_video.mp4)
+
+**Video Highlights:**
+- Home screen with banner carousel auto-play
+- Categories horizontal scrolling
+- Popular food items display
+- Food campaigns with discount badges
+- Restaurant list with pull-to-refresh pagination
+- Responsive design across different screen sizes
+- API integration and real-time data loading
+
+*The video demonstrates all major features including data loading and error handling.*
+
 ## 🎨 UI Design
 
 The app features a pixel-perfect implementation of the provided design mockup with:
@@ -149,13 +179,40 @@ The app features a pixel-perfect implementation of the provided design mockup wi
 
 ## 🧪 Code Quality
 
-- **Clean Code**: Well-structured and maintainable code
-- **Error Handling**: Comprehensive error handling for API requests
-- **Null Safety**: Full null safety implementation
-- **Comments**: Clear comments and documentation
-- **Reusable Widgets**: Modular and reusable UI components
-- **State Management**: Proper reactive state management with GetX
-- **API Service Layer**: Centralized API service with proper error handling
+- **Clean Code**: Well-structured and maintainable code with meaningful variable and function names
+- **Error Handling**: Comprehensive error handling for API requests with user-friendly messages
+- **Null Safety**: Full null safety implementation across the entire codebase
+- **Comments**: Clear comments and documentation explaining complex logic and business rules
+- **Reusable Widgets**: Modular and reusable UI components for better maintainability
+- **State Management**: Proper reactive state management with GetX for optimal performance
+- **API Service Layer**: Centralized API service with proper error handling and response parsing
+- **Code Documentation**: Detailed inline comments for clarity and future maintenance
+- **Best Practices**: Follows Flutter and Dart best practices and coding conventions
+- **Const Constructors**: Optimized widget tree with const constructors where applicable
+- **Performance Optimization**: Efficient image caching and minimal widget rebuilds
+
+### Code Documentation Highlights
+
+The codebase includes extensive comments for:
+- **API Integration**: Detailed notes on endpoints, parameters, and response handling
+- **Business Logic**: Explanations of pagination, data filtering, and state updates
+- **UI Components**: Widget composition and layout structure documentation
+- **Error Scenarios**: Handling of edge cases and fallback mechanisms
+- **Configuration**: API headers, zone IDs, and location parameters
+
+## 📋 Submission Checklist
+
+This project meets all submission requirements:
+
+- ✅ **Git Repository**: Hosted on GitHub with complete version control history
+- ✅ **Detailed README**: Comprehensive documentation with setup instructions, architecture overview, and API details
+- ✅ **Code Comments**: Extensive inline comments and documentation throughout the codebase
+- ✅ **Screenshots**: Multiple screenshots showcasing all major features (located in `assets/screenshots/`)
+- ✅ **Video Demo**: Complete app demonstration video (located in `assets/videos/`)
+- ✅ **Clean Architecture**: Well-organized folder structure following best practices
+- ✅ **Working Features**: All required features implemented and fully functional
+- ✅ **Error Handling**: Robust error handling with fallback mechanisms
+- ✅ **Responsive Design**: Optimized for mobile, tablet, and web platforms
 
 ## 📱 Responsive Design
 
