@@ -257,10 +257,7 @@ class HomePage extends GetView<HomeController> {
               height: AppDimensions.bannerHeight,
               child: PageView.builder(
                 itemCount: controller.banners.length,
-                controller: PageController(
-                  viewportFraction: 0.82,
-                  initialPage: 2,
-                ),
+                controller: controller.bannerPageController,
                 onPageChanged: (index) {
                   controller.currentBannerIndex.value = index;
                 },

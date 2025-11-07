@@ -1,3 +1,5 @@
+import 'dart:async';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:stackfood_app/app/data/models/banner_model.dart';
@@ -14,6 +16,10 @@ class HomeController extends GetxController {
 
   // Refresh Controller for pagination
   late RefreshController refreshController;
+  
+  // Banner PageController and Timer for auto-play
+  late PageController bannerPageController;
+  Timer? bannerTimer;
 
   // Observable Lists
   final RxList<BannerModel> banners = <BannerModel>[].obs;
@@ -47,7 +53,12 @@ class HomeController extends GetxController {
   void onInit() {
     super.onInit();
     refreshController = RefreshController(initialRefresh: false);
+    bannerPageController = PageController(
+      viewportFraction: 0.82,
+      initialPage: 2,
+    );
     fetchAllData();
+    startBannerAutoPlay();
   }
 
   Future<void> fetchAllData() async {
@@ -180,9 +191,30 @@ class HomeController extends GetxController {
     }
   }
 
+  // Banner Auto-play functionality
+  void startBannerAutoPlay() {
+    bannerTimer = Timer.periodic(const Duration(seconds: 3), (timer) {
+      if (banners.isNotEmpty) {
+        currentBannerIndex.value = (currentBannerIndex.value + 1) % banners.length;
+        bannerPageController.animateToPage(
+          currentBannerIndex.value,
+          duration: const Duration(milliseconds: 350),
+          curve: Curves.easeInOut,
+        );
+      }
+    });
+  }
+
+  void stopBannerAutoPlay() {
+    bannerTimer?.cancel();
+    bannerTimer = null;
+  }
+
   @override
   void onClose() {
     refreshController.dispose();
+    stopBannerAutoPlay();
+    bannerPageController.dispose();
     _apiService.dispose();
     super.onClose();
   }
