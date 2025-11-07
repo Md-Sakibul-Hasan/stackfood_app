@@ -27,13 +27,13 @@ class CampaignCard extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            margin: const EdgeInsets.only(right: AppDimensions.paddingMedium),
+            margin: const EdgeInsets.only(right: AppDimensions.paddingSmall),
             width: 285,
             padding: const EdgeInsets.symmetric(
                 horizontal: 12, vertical: AppDimensions.extraSmallPadding),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(15),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.08),
@@ -78,13 +78,12 @@ class CampaignCard extends StatelessWidget {
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
-                          fontSize: 16,
+                          fontSize: AppDimensions.fontSizeMedium,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF2B3D4F),
                           letterSpacing: -0.5,
                         ),
                       ),
-                      const SizedBox(height: 2),
 
                       // Restaurant Name
                       Text(
@@ -92,7 +91,7 @@ class CampaignCard extends StatelessWidget {
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          fontSize: 14,
+                          fontSize: AppDimensions.fontSizeMedium,
                           color: Colors.grey[600],
                           letterSpacing: 0,
                         ),
@@ -103,7 +102,7 @@ class CampaignCard extends StatelessWidget {
                         children: List.generate(5, (index) {
                           return const Icon(
                             Icons.star,
-                            size: 18,
+                            size: 15,
                             color: AppColors.discountBadge,
                           );
                         }),
@@ -119,7 +118,7 @@ class CampaignCard extends StatelessWidget {
                               Text(
                                 '\$${discountedPrice.toStringAsFixed(0)}',
                                 style: const TextStyle(
-                                  fontSize: 16,
+                                  fontSize: AppDimensions.fontSizeMedium,
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xFF2B3D4F),
                                 ),
@@ -132,7 +131,7 @@ class CampaignCard extends StatelessWidget {
                                     Text(
                                       '\$${originalPrice.toStringAsFixed(0)}',
                                       style: TextStyle(
-                                        fontSize: 16,
+                                        fontSize: AppDimensions.fontSizeMedium,
                                         color: Colors.grey[400],
                                       ),
                                     ),
@@ -181,7 +180,7 @@ class CampaignCard extends StatelessWidget {
                 child: Text(
                   '${discountPercentage.toStringAsFixed(0)}% off',
                   style: const TextStyle(
-                    fontSize: 12,
+                    fontSize: AppDimensions.fontSizeMedium,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),

@@ -212,11 +212,11 @@ class HomePage extends GetView<HomeController> {
           ),
         ],
       ),
-      child: Row(
+      child: const Row(
         children: [
           Expanded(
             child: TextField(
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 hintText: AppStrings.searchHint,
                 hintStyle: TextStyle(
                   color: AppColors.textLight,
@@ -226,7 +226,7 @@ class HomePage extends GetView<HomeController> {
               ),
             ),
           ),
-          const Icon(
+          Icon(
             Icons.search,
             color: AppColors.textLight,
           ),
@@ -250,8 +250,7 @@ class HomePage extends GetView<HomeController> {
       }
 
       return Padding(
-        padding:
-            const EdgeInsets.symmetric(vertical: AppDimensions.paddingMedium),
+        padding: const EdgeInsets.only(top: AppDimensions.paddingMedium),
         child: Column(
           children: [
             SizedBox(
@@ -367,7 +366,7 @@ class HomePage extends GetView<HomeController> {
           child: Wrap(
             spacing: AppDimensions.paddingMedium,
             runSpacing: AppDimensions.paddingMedium,
-            children: controller.categories.take(8).map((category) {
+            children: controller.categories.map((category) {
               return CategoryCard(
                 category: category,
                 imageBaseUrl: configController.businessImageUrl,
@@ -549,7 +548,7 @@ class HomePage extends GetView<HomeController> {
         child: const Icon(
           Icons.shopping_cart,
           color: Colors.white,
-          size: 30,
+          size: 28,
         ),
       ),
     );
