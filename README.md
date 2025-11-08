@@ -112,30 +112,6 @@ Key packages used in this project:
    flutter run -d <device_id>
    ```
 
-### Build
-
-To build the app for production:
-
-**Android APK:**
-```bash
-flutter build apk --release
-```
-
-**Android App Bundle:**
-```bash
-flutter build appbundle --release
-```
-
-**iOS:**
-```bash
-flutter build ios --release
-```
-
-**Web:**
-```bash
-flutter build web --release
-```
-
 ## 📸 Screenshots
 
 The app showcases a modern and intuitive user interface:
@@ -153,10 +129,13 @@ The app showcases a modern and intuitive user interface:
 Watch the complete app demonstration showcasing all features and functionality:
 
 ### App Demo Video
-![App Demo](assets/videos/app_video.mp4)
+
+https://github.com/Md-Sakibul-Hasan/stackfood_app/assets/videos/app_video.mp4
+
+> **Note**: If the video doesn't play above, you can [download it here](assets/videos/app_video.mp4) or view it directly in the repository at `assets/videos/app_video.mp4`
 
 **Video Highlights:**
-- Home screen with banner carousel auto-play
+- Home screen with banner carousel auto-play (3-second intervals)
 - Categories horizontal scrolling
 - Popular food items display
 - Food campaigns with discount badges
@@ -170,7 +149,7 @@ Watch the complete app demonstration showcasing all features and functionality:
 
 The app features a pixel-perfect implementation of the provided design mockup with:
 
-- **Color Scheme**: Orange primary color (#EF7822) with complementary colors
+- **Color Scheme**: Orange primary color (#5FA287) with complementary colors
 - **Typography**: Clean and readable font hierarchy
 - **Cards**: Elegant card designs with shadows and rounded corners
 - **Icons**: Custom category icons and Font Awesome icons
